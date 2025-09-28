@@ -22,7 +22,7 @@ const HeroSection = () => {
           />
         </div>
         
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6 relative z-10">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-black mb-6 relative z-10 whitespace-nowrap">
           Precision. Control. Dominance.
         </h1>
         
