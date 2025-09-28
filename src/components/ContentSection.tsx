@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { Zap, Target, Shield } from 'lucide-react';
 
 const ContentSection = () => {
   return (
@@ -13,7 +14,7 @@ const ContentSection = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-8 rounded-lg bg-card border border-border hover:border-accent transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white">⚡</span>
+                <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Lightning Fast</h3>
               <p className="text-muted-foreground">
@@ -23,7 +24,7 @@ const ContentSection = () => {
 
             <div className="text-center p-8 rounded-lg bg-card border border-border hover:border-accent transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white">🎯</span>
+                <Target className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Precision Control</h3>
               <p className="text-muted-foreground">
@@ -33,7 +34,7 @@ const ContentSection = () => {
 
             <div className="text-center p-8 rounded-lg bg-card border border-border hover:border-accent transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white">💪</span>
+                <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Built to Last</h3>
               <p className="text-muted-foreground">
