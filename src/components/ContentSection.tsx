@@ -7,7 +7,7 @@ const ContentSection = () => {
       {/* Features Section */}
       <section id="directory" className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 px-4">
             Why Choose <span className="text-accent">ClawGrip</span>?
           </h2>
           
@@ -48,7 +48,7 @@ const ContentSection = () => {
       {/* Testimonials Section */}
       <section className="py-20 px-6 bg-card/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 px-4">
             What Champions Are Saying
           </h2>
           
@@ -104,25 +104,25 @@ const ContentSection = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-accent/10 to-transparent">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 px-4">
             Ready to Elevate Your Game?
           </h2>
-          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
             Join thousands of gamers who've already discovered the ClawGrip advantage. 
             Your competition won't know what hit them.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-white px-12 py-4 text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110"
+              className="bg-accent hover:bg-accent/90 text-white px-8 sm:px-12 py-3 sm:py-4 text-lg sm:text-xl font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 w-full sm:w-auto"
             >
               Shop Here Now
             </Button>
             <Button 
               variant="outline" 
               size="lg"
-              className="border-2 border-accent text-accent hover:bg-accent hover:text-white px-12 py-4 text-xl font-bold transition-all duration-300"
+              className="border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 sm:px-12 py-3 sm:py-4 text-lg sm:text-xl font-bold transition-all duration-300 w-full sm:w-auto"
             >
               Learn More
             </Button>
