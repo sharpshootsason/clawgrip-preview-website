@@ -78,7 +78,7 @@ const ContentSection = () => {
       <footer className="py-12 px-6 border-t border-border">
         <div className="container mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2024 ClawGrip. All rights reserved. | Designed for champions.
+            © 2024 ClawGrip. All rights reserved. | Designed for champions by UFC fighters.
           </p>
         </div>
       </footer>
