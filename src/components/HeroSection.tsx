@@ -27,7 +27,7 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-800 mb-8 max-w-2xl mx-auto">
-          Experience the ultimate grip technology designed for champions, by champions, and tested from champions.
+          Experience the ultimate grip technology tested by champions, for champions, by champions.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
