@@ -30,21 +30,6 @@ const HeroSection = () => {
           Experience the ultimate grip technology tested by champions, for champions, from champions.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
-          >
-            Shop Here
-          </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-2 border-black text-black hover:bg-black hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 w-full sm:w-auto"
-          >
-            View Directory
-          </Button>
-        </div>
       </div>
 
       {/* Scroll Indicator */}
