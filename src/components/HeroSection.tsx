@@ -29,6 +29,17 @@ const HeroSection = () => {
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground mb-8 max-w-2xl mx-auto px-4 font-semibold">
           Gear for Warriors, Built To Domaate
         </p>
+
+        <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 max-w-xl mx-auto px-4">
+          Sports bandages created by champions, for champions.
+        </p>
+
+        <Button 
+          size="lg" 
+          className="bg-accent hover:bg-accent/90 text-white px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+        >
+          Buy Now
+        </Button>
       </div>
 
       {/* Scroll Indicator */}
