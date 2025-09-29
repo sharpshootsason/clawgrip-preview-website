@@ -7,19 +7,25 @@ const ContentSection = () => {
       {/* Features Section */}
       <section id="directory" className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="space-y-6 max-w-2xl mx-auto">
-            <div className="flex items-center gap-3">
-              <Check className="w-6 h-6 text-accent flex-shrink-0" />
+          <div className="text-center space-y-6">
+            <div className="flex items-center justify-center gap-3">
+              <div className="flex-shrink-0 w-6 flex justify-end">
+                <Check className="w-6 h-6 text-accent" />
+              </div>
               <p className="text-lg md:text-xl text-left">Resistant and breathable material</p>
             </div>
             
-            <div className="flex items-center gap-3">
-              <Check className="w-6 h-6 text-accent flex-shrink-0" />
+            <div className="flex items-center justify-center gap-3">
+              <div className="flex-shrink-0 w-6 flex justify-end">
+                <Check className="w-6 h-6 text-accent" />
+              </div>
               <p className="text-lg md:text-xl text-left">Support for fingers and knuckles</p>
             </div>
             
-            <div className="flex items-center gap-3">
-              <Check className="w-6 h-6 text-accent flex-shrink-0" />
+            <div className="flex items-center justify-center gap-3">
+              <div className="flex-shrink-0 w-6 flex justify-end">
+                <Check className="w-6 h-6 text-accent" />
+              </div>
               <p className="text-lg md:text-xl text-left">Designed for combat sports</p>
             </div>
           </div>
