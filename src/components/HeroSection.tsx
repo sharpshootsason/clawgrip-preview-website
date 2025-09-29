@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import clawGripLogo from '@/assets/clawgrip-logo.png';
+import boxingWrap from '@/assets/boxing-wrap.png';
 
 const HeroSection = () => {
   return (
@@ -22,9 +23,15 @@ const HeroSection = () => {
           />
         </div>
         
-        <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-black mb-6 relative z-10">
-          Precision. Control. Dominance.
-        </h1>
+        <div className="relative mb-6">
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-20 grayscale"
+            style={{ backgroundImage: `url(${boxingWrap})` }}
+          />
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-black py-4 px-8 relative z-10">
+            Precision. Control. Dominance.
+          </h1>
+        </div>
         
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 mb-8 max-w-2xl mx-auto px-4">
           Experience the ultimate grip technology tested by champions, for champions, from champions.
