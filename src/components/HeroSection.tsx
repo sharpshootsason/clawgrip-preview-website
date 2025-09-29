@@ -22,8 +22,7 @@ const HeroSection = () => {
           />
         </div>
         
-        {/* Text content with backdrop blur panel */}
-        <div className="max-w-3xl mx-auto backdrop-blur-sm bg-black/20 p-8 rounded-2xl border border-white/10 shadow-2xl animate-scale-in">
+        <div className="max-w-3xl mx-auto animate-scale-in">
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 tracking-wide" 
               style={{ textShadow: '0 2px 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)' }}>
             Boxing | Grappling | MMA
