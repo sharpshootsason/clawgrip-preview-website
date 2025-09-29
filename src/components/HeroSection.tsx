@@ -5,19 +5,12 @@ import boxingWrap from '@/assets/boxing-wrap.png';
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-gray-900"></div>
-      
-      {/* Boxing Wrap Background */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div 
-          className="w-full h-48 bg-cover bg-center grayscale opacity-30"
-          style={{ 
-            backgroundImage: `url(${boxingWrap})`,
-            maskImage: 'linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%)'
-          }}
-        />
-      </div>
+      {/* Boxing Wrap Full Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center grayscale opacity-40"
+        style={{ backgroundImage: `url(${boxingWrap})` }}
+      />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6">
@@ -33,7 +26,7 @@ const HeroSection = () => {
           Precision. Control. Dominance.
         </h1>
         
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 mb-8 max-w-2xl mx-auto px-4">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground mb-8 max-w-2xl mx-auto px-4">
           Experience the ultimate grip technology tested by champions, for champions, from champions.
         </p>
 
