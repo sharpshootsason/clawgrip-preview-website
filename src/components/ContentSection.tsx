@@ -15,7 +15,7 @@ const ContentSection = () => {
             
             <div className="flex items-center justify-center gap-3">
               <Check className="w-6 h-6 text-accent" />
-              <p className="text-lg md:text-xl">Support for dolls and knuckles</p>
+              <p className="text-lg md:text-xl">Support for fingers and knuckles</p>
             </div>
             
             <div className="flex items-center justify-center gap-3">
