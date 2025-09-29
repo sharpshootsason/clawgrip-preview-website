@@ -1,45 +1,26 @@
 import { Button } from '@/components/ui/button';
-import { Zap, Target, Shield } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const ContentSection = () => {
   return (
     <div className="bg-background text-foreground">
       {/* Features Section */}
       <section id="directory" className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16 px-4">
-            Why Choose <span className="text-accent">ClawGrip</span>?
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-lg bg-card border border-border hover:border-accent transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Lightning Fast</h3>
-              <p className="text-muted-foreground">
-                Advanced grip technology that responds instantly to your every move.
-              </p>
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center space-y-6">
+            <div className="flex items-center justify-center gap-3">
+              <Check className="w-6 h-6 text-accent" />
+              <p className="text-lg md:text-xl">Resistant and breathable material</p>
             </div>
-
-            <div className="text-center p-8 rounded-lg bg-card border border-border hover:border-accent transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Precision Control</h3>
-              <p className="text-muted-foreground">
-                Engineered for accuracy with micro-textured surfaces for maximum control.
-              </p>
+            
+            <div className="flex items-center justify-center gap-3">
+              <Check className="w-6 h-6 text-accent" />
+              <p className="text-lg md:text-xl">Support for dolls and knuckles</p>
             </div>
-
-            <div className="text-center p-8 rounded-lg bg-card border border-border hover:border-accent transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Built to Last</h3>
-              <p className="text-muted-foreground">
-                Premium materials designed to withstand the most intense gaming sessions.
-              </p>
+            
+            <div className="flex items-center justify-center gap-3">
+              <Check className="w-6 h-6 text-accent" />
+              <p className="text-lg md:text-xl">Designed for combat sports</p>
             </div>
           </div>
         </div>
