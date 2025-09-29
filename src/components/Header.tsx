@@ -34,7 +34,7 @@ const Header = () => {
             <span className={`font-bold text-foreground transition-smooth ${
               isScrolled ? 'text-base' : 'text-xl'
             }`}>
-              Claw Grip <sup className="text-xs">™</sup>
+              ClawGrip<sup className="text-xs">™</sup>
             </span>
           </div>
 
