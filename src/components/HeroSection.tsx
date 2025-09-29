@@ -8,9 +8,15 @@ const HeroSection = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-gray-900"></div>
       
-      {/* White Strip Background */}
-      <div className="hero-strip absolute inset-0 flex items-center justify-center">
-        <div className="w-full h-32 hero-strip"></div>
+      {/* Boxing Wrap Background */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div 
+          className="w-full h-48 bg-cover bg-center grayscale opacity-30"
+          style={{ 
+            backgroundImage: `url(${boxingWrap})`,
+            maskImage: 'linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%)'
+          }}
+        />
       </div>
 
       {/* Content */}
@@ -23,15 +29,9 @@ const HeroSection = () => {
           />
         </div>
         
-        <div className="relative mb-6">
-          <div 
-            className="absolute inset-0 bg-cover bg-center opacity-20 grayscale"
-            style={{ backgroundImage: `url(${boxingWrap})` }}
-          />
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-black py-4 px-8 relative z-10">
-            Precision. Control. Dominance.
-          </h1>
-        </div>
+        <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6 relative z-10">
+          Precision. Control. Dominance.
+        </h1>
         
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 mb-8 max-w-2xl mx-auto px-4">
           Experience the ultimate grip technology tested by champions, for champions, from champions.
