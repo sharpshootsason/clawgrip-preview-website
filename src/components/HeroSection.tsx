@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Boxing Wrap Full Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center grayscale opacity-40"
+        className="absolute inset-0 bg-cover bg-[center_bottom] grayscale opacity-40"
         style={{ backgroundImage: `url(${boxingWrap})` }}
       />
       <div className="absolute inset-0 bg-black/50" />
