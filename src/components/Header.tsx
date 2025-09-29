@@ -24,13 +24,6 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img 
-              src={clawGripLogo} 
-              alt="Claw Grip Logo" 
-              className={`transition-smooth ${
-                isScrolled ? 'h-6' : 'h-10'
-              }`}
-            />
             <span className={`font-bold text-foreground transition-smooth ${
               isScrolled ? 'text-base' : 'text-xl'
             }`}>
