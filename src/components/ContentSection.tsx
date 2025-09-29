@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { Check, Shield, Lock, Zap } from 'lucide-react';
 
 const ContentSection = () => {
   return (
@@ -21,6 +21,34 @@ const ContentSection = () => {
             <div className="flex items-center justify-center gap-3">
               <Check className="w-6 h-6 text-accent" />
               <p className="text-lg md:text-xl">Designed for combat sports</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-6 bg-card/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-bold">Maximum protection</h3>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Lock className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-bold">Firm adjustment</h3>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-xl font-bold">Unique style</h3>
             </div>
           </div>
         </div>
