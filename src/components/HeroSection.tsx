@@ -18,7 +18,7 @@ const HeroSection = () => {
           <img 
             src={clawGripLogo} 
             alt="ClawGrip - Premium Grip Solutions" 
-            className="h-24 md:h-32 lg:h-40 mx-auto drop-shadow-2xl"
+            className="h-24 md:h-32 lg:h-40 mx-auto drop-shadow-2xl opacity-80"
           />
         </div>
         
