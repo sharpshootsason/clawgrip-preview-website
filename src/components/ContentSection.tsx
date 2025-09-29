@@ -117,7 +117,7 @@ const ContentSection = () => {
             Ready to Elevate Your Game?
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
-            Join thousands of gamers who've already discovered the ClawGrip advantage. 
+            Join thousands of fighters who've already discovered the ClawGrip advantage. 
             Your competition won't know what hit them.
           </p>
           
