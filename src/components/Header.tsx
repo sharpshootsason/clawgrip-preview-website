@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Menu, X } from 'lucide-react';
 import clawGripLogo from '@/assets/clawgrip-logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,15 +68,56 @@ const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu */}
-          <div className="md:hidden flex items-center space-x-3">
-            <a href="#home" className="text-foreground text-sm">Home</a>
-            <a href="#store" className="text-foreground text-sm">Store</a>
-            <Button variant="default" size="sm" className="bg-accent hover:bg-accent/90 font-bold">
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-foreground"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </nav>
+
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 space-y-3">
+            <a 
+              href="#home" 
+              className="block text-foreground hover:text-accent transition-fast py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Home
+            </a>
+            <a 
+              href="#store" 
+              className="block text-foreground hover:text-accent transition-fast py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Store
+            </a>
+            <a 
+              href="#reviews" 
+              className="block text-foreground hover:text-accent transition-fast py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Reviews
+            </a>
+            <a 
+              href="#contact" 
+              className="block text-foreground hover:text-accent transition-fast py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </a>
+            <Button 
+              variant="default" 
+              size="sm" 
+              className="bg-accent hover:bg-accent/90 font-bold w-full"
+            >
               Buy
             </Button>
           </div>
-        </nav>
+        )}
       </div>
     </header>
   );
