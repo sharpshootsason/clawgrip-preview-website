@@ -8,18 +8,18 @@ const ContentSection = () => {
       <section id="directory" className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center space-y-6">
-            <div className="flex items-center justify-center gap-3">
-              <Check className="w-6 h-6 text-accent" />
+            <div className="flex items-start justify-center gap-3">
+              <Check className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
               <p className="text-lg md:text-xl">Resistant and breathable material</p>
             </div>
             
-            <div className="flex items-center justify-center gap-3">
-              <Check className="w-6 h-6 text-accent" />
+            <div className="flex items-start justify-center gap-3">
+              <Check className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
               <p className="text-lg md:text-xl">Support for fingers and knuckles</p>
             </div>
             
-            <div className="flex items-center justify-center gap-3">
-              <Check className="w-6 h-6 text-accent" />
+            <div className="flex items-start justify-center gap-3">
+              <Check className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
               <p className="text-lg md:text-xl">Designed for combat sports</p>
             </div>
           </div>
