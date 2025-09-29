@@ -22,14 +22,13 @@ const HeroSection = () => {
           />
         </div>
         
-        <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6 relative z-10">
-          Precision. Control. Dominance.
+        <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 relative z-10">
+          Boxing | Grappling | MMA
         </h1>
         
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground mb-8 max-w-2xl mx-auto px-4">
-          Experience the ultimate grip technology tested by champions, for champions, from champions.
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground mb-8 max-w-2xl mx-auto px-4 font-semibold">
+          Gear for Warriors, Built To Domaate
         </p>
-
       </div>
 
       {/* Scroll Indicator */}
