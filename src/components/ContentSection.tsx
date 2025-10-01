@@ -86,7 +86,7 @@ const ContentSection = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-6 rounded-lg bg-card/60 border border-border/50 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(var(--accent),0.2)] hover:border-accent/50">
               <p className="text-muted-foreground mb-4" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)' }}>
-                "These are the grips that make me a champion"
+                "These are the wraps that make me a champion"
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 shadow-[0_0_15px_rgba(var(--accent),0.5)]">
