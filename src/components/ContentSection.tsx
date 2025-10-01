@@ -86,45 +86,45 @@ const ContentSection = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-6 rounded-lg bg-card/60 border border-border/50 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(var(--accent),0.2)] hover:border-accent/50">
               <p className="text-muted-foreground mb-4" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)' }}>
-                "Flibber jab wokka shimmy grip pow! Never felt such zoomzoom in my fingertips. Absolutely bonkers performance!"
+                "These are the grips that make me a champion"
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 shadow-[0_0_15px_rgba(var(--accent),0.5)]">
-                  <span className="text-white font-bold">JS</span>
+                  <span className="text-white font-bold">JE</span>
                 </div>
                 <div>
-                  <p className="font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.2)' }}>Jibber Smith</p>
-                  <p className="text-sm text-muted-foreground">UFC Champion</p>
+                  <p className="font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.2)' }}>Joselyn Edwards</p>
+                  <p className="text-sm text-muted-foreground">UFC Fighter</p>
                 </div>
               </div>
             </div>
 
             <div className="p-6 rounded-lg bg-card/60 border border-border/50 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(var(--accent),0.2)] hover:border-accent/50">
               <p className="text-muted-foreground mb-4" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)' }}>
-                "Wobble gobble grip magic! My hands feel like they've been blessed by the grip gods. Phenomenal stuff!"
+                "These are my members favorites"
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 shadow-[0_0_15px_rgba(var(--accent),0.5)]">
-                  <span className="text-white font-bold">BB</span>
+                  <span className="text-white font-bold">AC</span>
                 </div>
                 <div>
-                  <p className="font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.2)' }}>Blobby McGrip</p>
-                  <p className="text-sm text-muted-foreground">MMA Fighter</p>
+                  <p className="font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.2)' }}>Austin Childers</p>
+                  <p className="text-sm text-muted-foreground">MMA Fighter and Gym Owner</p>
                 </div>
               </div>
             </div>
 
             <div className="p-6 rounded-lg bg-card/60 border border-border/50 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(var(--accent),0.2)] hover:border-accent/50">
               <p className="text-muted-foreground mb-4" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)' }}>
-                "Squeezle beezle fantastic grip wizardry! Changed my whole game, now I'm unstoppable in the octagon!"
+                "These wraps always end up missing when my bag is open haha.. it's definitely high demand for everyone in here"
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mr-4 shadow-[0_0_15px_rgba(var(--accent),0.5)]">
-                  <span className="text-white font-bold">WF</span>
+                  <span className="text-white font-bold">GC</span>
                 </div>
                 <div>
-                  <p className="font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.2)' }}>Wibbly Fighter</p>
-                  <p className="text-sm text-muted-foreground">UFC Contender</p>
+                  <p className="font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.2)' }}>Gui Cury</p>
+                  <p className="text-sm text-muted-foreground">MMA Fighter and Coach</p>
                 </div>
               </div>
             </div>
