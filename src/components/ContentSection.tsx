@@ -8,7 +8,7 @@ const ContentSection = () => {
       <section id="directory" className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
           {/* Glass-morphism container */}
-          <div className="backdrop-blur-md bg-card/40 p-8 rounded-2xl border-l-4 border-accent shadow-lg">
+          <div className="bg-card/40 p-8 rounded-2xl border-l-4 border-accent shadow-lg">
             <div className="text-center space-y-6">
               <div className="flex items-center justify-center gap-3 transition-all duration-300 hover:translate-x-2">
                 <div className="flex-shrink-0 w-6 flex justify-end">
@@ -45,7 +45,7 @@ const ContentSection = () => {
       <section className="py-16 px-6 bg-gradient-to-b from-card/30 to-card/10">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 backdrop-blur-sm bg-card/30 rounded-xl border border-border/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(var(--accent),0.2)] hover:bg-card/50">
+            <div className="text-center p-6 bg-card/30 rounded-xl border border-border/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(var(--accent),0.2)] hover:bg-card/50">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_20px_rgba(var(--accent),0.3)]">
                 <Shield className="w-8 h-8 text-accent drop-shadow-[0_0_10px_rgba(var(--accent),0.8)]" />
               </div>
@@ -54,7 +54,7 @@ const ContentSection = () => {
               </h3>
             </div>
 
-            <div className="text-center p-6 backdrop-blur-sm bg-card/30 rounded-xl border border-border/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(var(--accent),0.2)] hover:bg-card/50">
+            <div className="text-center p-6 bg-card/30 rounded-xl border border-border/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(var(--accent),0.2)] hover:bg-card/50">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_20px_rgba(var(--accent),0.3)]">
                 <Lock className="w-8 h-8 text-accent drop-shadow-[0_0_10px_rgba(var(--accent),0.8)]" />
               </div>
@@ -63,7 +63,7 @@ const ContentSection = () => {
               </h3>
             </div>
 
-            <div className="text-center p-6 backdrop-blur-sm bg-card/30 rounded-xl border border-border/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(var(--accent),0.2)] hover:bg-card/50">
+            <div className="text-center p-6 bg-card/30 rounded-xl border border-border/50 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(var(--accent),0.2)] hover:bg-card/50">
               <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_20px_rgba(var(--accent),0.3)]">
                 <Zap className="w-8 h-8 text-accent drop-shadow-[0_0_10px_rgba(var(--accent),0.8)]" />
               </div>
@@ -84,7 +84,7 @@ const ContentSection = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 rounded-lg backdrop-blur-md bg-card/60 border border-border/50 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(var(--accent),0.2)] hover:border-accent/50">
+            <div className="p-6 rounded-lg bg-card/60 border border-border/50 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(var(--accent),0.2)] hover:border-accent/50">
               <p className="text-muted-foreground mb-4" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)' }}>
                 "Flibber jab wokka shimmy grip pow! Never felt such zoomzoom in my fingertips. Absolutely bonkers performance!"
               </p>
@@ -99,7 +99,7 @@ const ContentSection = () => {
               </div>
             </div>
 
-            <div className="p-6 rounded-lg backdrop-blur-md bg-card/60 border border-border/50 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(var(--accent),0.2)] hover:border-accent/50">
+            <div className="p-6 rounded-lg bg-card/60 border border-border/50 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(var(--accent),0.2)] hover:border-accent/50">
               <p className="text-muted-foreground mb-4" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)' }}>
                 "Wobble gobble grip magic! My hands feel like they've been blessed by the grip gods. Phenomenal stuff!"
               </p>
@@ -114,7 +114,7 @@ const ContentSection = () => {
               </div>
             </div>
 
-            <div className="p-6 rounded-lg backdrop-blur-md bg-card/60 border border-border/50 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(var(--accent),0.2)] hover:border-accent/50">
+            <div className="p-6 rounded-lg bg-card/60 border border-border/50 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(var(--accent),0.2)] hover:border-accent/50">
               <p className="text-muted-foreground mb-4" style={{ textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)' }}>
                 "Squeezle beezle fantastic grip wizardry! Changed my whole game, now I'm unstoppable in the octagon!"
               </p>
@@ -138,7 +138,7 @@ const ContentSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent pointer-events-none" />
         
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <div className="backdrop-blur-sm bg-card/20 p-8 rounded-2xl border border-accent/20 shadow-[0_0_50px_rgba(var(--accent),0.15)]">
+          <div className="bg-card/20 p-8 rounded-2xl border border-accent/20 shadow-[0_0_50px_rgba(var(--accent),0.15)]">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 px-4"
                 style={{ textShadow: '0 4px 30px rgba(255, 255, 255, 0.2), 0 0 60px rgba(var(--accent), 0.3)' }}>
               Ready to Elevate Your Game?
@@ -159,7 +159,7 @@ const ContentSection = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-2 border-accent bg-background/50 backdrop-blur-sm text-accent hover:bg-accent hover:text-white px-8 sm:px-12 py-3 sm:py-4 text-lg sm:text-xl font-bold transition-all duration-300 hover:shadow-[0_0_30px_rgba(var(--accent),0.4)] w-full sm:w-auto"
+                className="border-2 border-accent bg-background/50 text-accent hover:bg-accent hover:text-white px-8 sm:px-12 py-3 sm:py-4 text-lg sm:text-xl font-bold transition-all duration-300 hover:shadow-[0_0_30px_rgba(var(--accent),0.4)] w-full sm:w-auto"
               >
                 Learn More
               </Button>
