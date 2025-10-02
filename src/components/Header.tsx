@@ -36,7 +36,7 @@ const Header = () => {
               Home
             </a>
             <a 
-              href="#store" 
+              href="#products" 
               className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
             >
               Products
@@ -95,7 +95,7 @@ const Header = () => {
               Home
             </a>
             <a 
-              href="#store" 
+              href="#products" 
               className="block text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
