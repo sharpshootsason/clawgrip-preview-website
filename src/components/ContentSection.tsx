@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Check, Shield, Lock, Zap } from 'lucide-react';
 import heroBg1 from '@/assets/hero-bg-1.png';
+import newReleasesWoman from '@/assets/new-releases-woman.png';
 import ProductSection from './ProductSection';
 
 const ContentSection = () => {
@@ -37,24 +38,35 @@ const ContentSection = () => {
       </section>
 
       {/* New Releases Section */}
-      <section className="relative min-h-[600px] flex items-center justify-end overflow-hidden border-t border-border/30">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroBg1})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-background/80" />
-        
-        {/* Content */}
-        <div className="relative z-10 px-6 py-16 md:pr-16 max-w-xl text-right">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 uppercase tracking-wide">
-            New Releases
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 font-light">
-            For early rounds, late rounds, and zero distractions.
-          </p>
-          
-          <div className="flex justify-end">
+      <section className="py-24 px-6 border-t border-border/30">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 uppercase tracking-wide">
+              New Releases
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 font-light">
+              For early rounds, late rounds, and zero distractions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="overflow-hidden border border-border/30 bg-card/20">
+              <img 
+                src={heroBg1} 
+                alt="ClawGrip Wraps - Man" 
+                className="w-full h-[500px] object-cover"
+              />
+            </div>
+            <div className="overflow-hidden border border-border/30 bg-card/20">
+              <img 
+                src={newReleasesWoman} 
+                alt="ClawGrip Wraps - Woman" 
+                className="w-full h-[500px] object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="flex justify-center">
             <Button 
               variant="outline"
               size="lg"
