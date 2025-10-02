@@ -1,69 +1,10 @@
 import { Button } from '@/components/ui/button';
-import { Check, Shield, Lock, Zap, Mail, User, MessageSquare } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import { useState } from 'react';
+import { Check, Shield, Lock, Zap, Mail } from 'lucide-react';
 import heroBg1 from '@/assets/hero-bg-1.png';
 import newReleasesWoman from '@/assets/new-releases-woman.png';
 import ProductSection from './ProductSection';
 
 const ContentSection = () => {
-  const { toast } = useToast();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validate inputs
-    if (!name.trim() || name.length > 100) {
-      toast({
-        title: "Invalid name",
-        description: "Please enter a valid name (max 100 characters)",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    if (!email.trim() || !email.includes('@') || email.length > 255) {
-      toast({
-        title: "Invalid email",
-        description: "Please enter a valid email address",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    if (!message.trim() || message.length > 1000) {
-      toast({
-        title: "Invalid message",
-        description: "Please enter a message (max 1000 characters)",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // Encode the data for mailto
-    const subject = encodeURIComponent(`Contact from ${name.trim()}`);
-    const body = encodeURIComponent(`Name: ${name.trim()}\nEmail: ${email.trim()}\n\nMessage:\n${message.trim()}`);
-    const mailtoLink = `mailto:clawgripbrand@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    // Clear form
-    setName('');
-    setEmail('');
-    setMessage('');
-    
-    toast({
-      title: "Opening email client",
-      description: "Your default email client will open with your message",
-    });
-  };
-
   return (
     <div className="bg-background text-foreground">
       {/* Features Section */}
@@ -210,89 +151,19 @@ const ContentSection = () => {
 
       {/* Contact Section */}
       <section className="py-24 px-6 border-t border-border/30">
-        <div className="container mx-auto max-w-2xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase tracking-wide">
-              Contact Us
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground font-light">
-              Have a question? We'd love to hear from you.
-            </p>
-          </div>
-
-          <form onSubmit={handleContactSubmit} className="space-y-6">
-            <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-semibold uppercase tracking-wider flex items-center gap-2">
-                <User className="w-4 h-4" />
-                Name
-              </label>
-              <Input
-                id="name"
-                type="text"
-                placeholder="Your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                maxLength={100}
-                required
-                className="bg-background border-border/50"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-semibold uppercase tracking-wider flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                Email
-              </label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="your@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                maxLength={255}
-                required
-                className="bg-background border-border/50"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-semibold uppercase tracking-wider flex items-center gap-2">
-                <MessageSquare className="w-4 h-4" />
-                Message
-              </label>
-              <Textarea
-                id="message"
-                placeholder="Your message..."
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                maxLength={1000}
-                rows={6}
-                required
-                className="bg-background border-border/50 resize-none"
-              />
-              <p className="text-xs text-muted-foreground text-right">
-                {message.length}/1000 characters
-              </p>
-            </div>
-
-            <Button
-              type="submit"
-              size="lg"
-              className="w-full bg-accent hover:bg-accent/80 text-white uppercase tracking-wider font-semibold transition-all duration-300"
+        <div className="container mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 uppercase tracking-wide">
+            Contact Us
+          </h2>
+          <div className="flex items-center justify-center gap-3 text-xl">
+            <Mail className="w-6 h-6 text-accent" />
+            <a 
+              href="mailto:clawgripbrand@gmail.com" 
+              className="text-accent hover:underline font-semibold"
             >
-              Send Message
-            </Button>
-
-            <p className="text-xs text-center text-muted-foreground">
-              Or email us directly at{' '}
-              <a 
-                href="mailto:clawgripbrand@gmail.com" 
-                className="text-accent hover:underline"
-              >
-                clawgripbrand@gmail.com
-              </a>
-            </p>
-          </form>
+              clawgripbrand@gmail.com
+            </a>
+          </div>
         </div>
       </section>
 
