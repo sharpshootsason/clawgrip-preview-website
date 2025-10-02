@@ -97,7 +97,7 @@ const ContentSection = () => {
       </section>
 
       {/* New Releases Section */}
-      <section id="products" className="py-24 px-6 border-t border-border/30">
+      <section className="py-24 px-6 border-t border-border/30">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 uppercase tracking-wide">
