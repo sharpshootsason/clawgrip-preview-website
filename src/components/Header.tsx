@@ -18,54 +18,49 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-smooth bg-background/95 backdrop-blur-sm border-b border-border/50 ${
-        isScrolled ? 'shadow-lg' : ''
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/80 backdrop-blur-md border-b border-border/30`}
     >
-      <div className="container mx-auto px-6 py-4">
-        <nav className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <span className={`font-bold text-foreground transition-smooth ${
-              isScrolled ? 'text-base' : 'text-xl'
-            }`}>
-              ClawGrip<sup className="text-xs">™</sup>
-            </span>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-6">
+      <div className="container mx-auto px-6">
+        <nav className="flex items-center justify-between h-16">
+          {/* Left Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
             <a 
               href="#home" 
-              className="text-foreground hover:text-accent transition-fast relative group"
+              className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
             >
               Home
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </a>
             <a 
               href="#store" 
-              className="text-foreground hover:text-accent transition-fast relative group"
+              className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
             >
-              Store
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
+              Products
             </a>
+          </div>
+
+          {/* Centered Logo */}
+          <div className="flex items-center">
+            <img 
+              src={clawGripLogo} 
+              alt="ClawGrip" 
+              className="h-8 md:h-10 opacity-90"
+            />
+          </div>
+
+          {/* Right Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
             <a 
               href="#reviews" 
-              className="text-foreground hover:text-accent transition-fast relative group"
+              className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
             >
               Reviews
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </a>
             <a 
               href="#contact" 
-              className="text-foreground hover:text-accent transition-fast relative group"
+              className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
             >
               Contact
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
             </a>
-            <Button variant="default" size="sm" className="bg-accent hover:bg-accent/90 font-bold">
-              Buy
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,42 +75,35 @@ const Header = () => {
 
         {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3">
+          <div className="md:hidden py-4 space-y-4 border-t border-border/30">
             <a 
               href="#home" 
-              className="block text-foreground hover:text-accent transition-fast py-2"
+              className="block text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </a>
             <a 
               href="#store" 
-              className="block text-foreground hover:text-accent transition-fast py-2"
+              className="block text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Store
+              Products
             </a>
             <a 
               href="#reviews" 
-              className="block text-foreground hover:text-accent transition-fast py-2"
+              className="block text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Reviews
             </a>
             <a 
               href="#contact" 
-              className="block text-foreground hover:text-accent transition-fast py-2"
+              className="block text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
             </a>
-            <Button 
-              variant="default" 
-              size="sm" 
-              className="bg-accent hover:bg-accent/90 font-bold w-full"
-            >
-              Buy
-            </Button>
           </div>
         )}
       </div>

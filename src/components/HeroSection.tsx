@@ -4,49 +4,47 @@ import boxingWrap from '@/assets/boxing-wrap.png';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Boxing Wrap Full Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center grayscale opacity-40"
+        className="absolute inset-0 bg-cover bg-center grayscale opacity-20"
         style={{ backgroundImage: `url(${boxingWrap})` }}
       />
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6">
-        <div className="mb-8">
+      <div className="relative z-10 text-center px-6 py-20">
+        <div className="mb-12">
           <img 
             src={clawGripLogo} 
             alt="ClawGrip - Premium Grip Solutions" 
-            className="h-24 md:h-32 lg:h-40 mx-auto drop-shadow-2xl opacity-80 animate-fade-in"
+            className="h-20 md:h-28 lg:h-36 mx-auto opacity-90"
           />
         </div>
         
-        <div className="max-w-3xl mx-auto animate-scale-in">
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 tracking-wide" 
-              style={{ textShadow: '0 2px 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)' }}>
+        <div className="max-w-4xl mx-auto space-y-6">
+          <h1 className="text-sm sm:text-base md:text-lg uppercase tracking-[0.3em] text-foreground/70 font-light">
             Boxing | Grappling | MMA
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground mb-8 font-semibold tracking-wide"
-             style={{ textShadow: '0 2px 15px rgba(255, 255, 255, 0.25)' }}>
-            Gear for Warriors - Built To Dominate
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground font-bold tracking-tight leading-tight">
+            Gear for Warriors<br/>Built To Dominate
           </p>
 
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6"
-             style={{ textShadow: '0 1px 10px rgba(0, 0, 0, 0.5)' }}>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light">
             Sports bandages created by champions, for champions.
           </p>
 
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-white px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold shadow-[0_0_30px_rgba(var(--accent),0.5)] hover:shadow-[0_0_50px_rgba(var(--accent),0.7)] transition-all duration-300 hover:scale-105"
-          >
-            Buy Now
-          </Button>
+          <div className="pt-8">
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/80 text-white px-12 py-6 text-base uppercase tracking-wider font-semibold transition-all duration-300"
+            >
+              Shop Now
+            </Button>
+          </div>
         </div>
       </div>
-
     </section>
   );
 };
