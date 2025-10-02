@@ -104,62 +104,6 @@ const ContentSection = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-24 px-6 border-t border-border/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-16 uppercase tracking-wider">
-            What Champions Are Saying
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-8 bg-card/20 border border-border/30 transition-all duration-300 hover:border-accent/50">
-              <p className="text-foreground/80 mb-6 font-light leading-relaxed">
-                "These are the wraps that make me a champion"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-accent/90 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">JE</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-sm">Joselyn Edwards</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider">UFC Fighter</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-8 bg-card/20 border border-border/30 transition-all duration-300 hover:border-accent/50">
-              <p className="text-foreground/80 mb-6 font-light leading-relaxed">
-                "These are my members favorites"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-accent/90 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">AC</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-sm">Austin Childers</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider">MMA Fighter and Gym Owner</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-8 bg-card/20 border border-border/30 transition-all duration-300 hover:border-accent/50">
-              <p className="text-foreground/80 mb-6 font-light leading-relaxed">
-                "These wraps always end up missing when my bag is open haha.. it's definitely high demand for everyone in here"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-accent/90 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">GC</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-sm">Gui Cury</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider">MMA Fighter and Coach</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-24 px-6 border-t border-border/30">
         <div className="container mx-auto max-w-4xl text-center">
