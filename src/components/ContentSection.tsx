@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Check, Shield, Lock, Zap } from 'lucide-react';
 import heroBg1 from '@/assets/hero-bg-1.png';
+import ProductSection from './ProductSection';
 
 const ContentSection = () => {
   return (
@@ -64,6 +65,9 @@ const ContentSection = () => {
           </div>
         </div>
       </section>
+
+      {/* Product Section */}
+      <ProductSection />
 
       {/* Benefits Section */}
       <section className="py-24 px-6 border-t border-border/30">
