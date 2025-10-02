@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShoppingCart } from 'lucide-react';
+import { useCart } from '@/contexts/CartContext';
 import clawGripLogo from '@/assets/clawgrip-logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const { getTotalItems } = useCart();
+  const cartItemCount = getTotalItems();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,6 +60,18 @@ const Header = () => {
             >
               Contact
             </a>
+            <button
+              onClick={() => navigate('/cart')}
+              className="relative text-foreground/80 hover:text-foreground transition-colors"
+              aria-label="Shopping cart"
+            >
+              <ShoppingCart size={20} />
+              {cartItemCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-accent text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                  {cartItemCount}
+                </span>
+              )}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,6 +108,16 @@ const Header = () => {
             >
               Contact
             </a>
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                navigate('/cart');
+              }}
+              className="flex items-center gap-2 text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
+            >
+              <ShoppingCart size={20} />
+              Cart {cartItemCount > 0 && `(${cartItemCount})`}
+            </button>
           </div>
         )}
       </div>

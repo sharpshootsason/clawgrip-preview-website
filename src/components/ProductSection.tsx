@@ -1,9 +1,26 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { useCart } from '@/contexts/CartContext';
+import { useToast } from '@/hooks/use-toast';
 import clawgripWraps from '@/assets/clawgrip-wraps.png';
 
 const ProductSection = () => {
+  const { addItem } = useCart();
+  const { toast } = useToast();
+
+  const handleAddToCart = () => {
+    addItem({
+      id: 'clawgrip-pro-wraps',
+      name: 'ClawGrip Pro Wraps',
+      price: 12.99,
+      image: clawgripWraps,
+    });
+    
+    toast({
+      title: "Added to cart",
+      description: "ClawGrip Pro Wraps has been added to your cart.",
+    });
+  };
   return (
     <section id="products" className="py-24 px-6 border-t border-border/30">
       <div className="container mx-auto max-w-7xl">
@@ -40,6 +57,7 @@ const ProductSection = () => {
               <Button 
                 className="w-full bg-accent hover:bg-accent/80 text-white uppercase tracking-wider font-semibold transition-all duration-300"
                 size="lg"
+                onClick={handleAddToCart}
               >
                 Add to Cart
               </Button>
