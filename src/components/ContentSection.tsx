@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Check, Shield, Lock, Zap } from 'lucide-react';
+import heroBg1 from '@/assets/hero-bg-1.png';
 
 const ContentSection = () => {
   return (
@@ -30,6 +31,43 @@ const ContentSection = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Releases Section */}
+      <section className="relative min-h-[600px] flex items-center justify-end overflow-hidden border-t border-border/30">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroBg1})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-background/80" />
+        
+        {/* Content */}
+        <div className="relative z-10 px-6 py-16 md:pr-16 max-w-xl text-right">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 uppercase tracking-wide">
+            New Releases
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 font-light">
+            For early rounds, late rounds, and zero distractions.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-end">
+            <Button 
+              variant="outline"
+              size="lg"
+              className="bg-white text-background border-0 hover:bg-white/90 px-8 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300"
+            >
+              Shop Men
+            </Button>
+            <Button 
+              variant="outline"
+              size="lg"
+              className="border border-foreground hover:bg-foreground hover:text-background px-8 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300"
+            >
+              Shop Women
+            </Button>
           </div>
         </div>
       </section>
