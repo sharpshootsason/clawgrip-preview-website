@@ -5,7 +5,7 @@ import clawgripWraps from '@/assets/clawgrip-wraps.png';
 
 const ProductSection = () => {
   return (
-    <section className="py-24 px-6 border-t border-border/30">
+    <section id="products" className="py-24 px-6 border-t border-border/30">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 uppercase tracking-wider">
           New Wraps

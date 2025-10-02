@@ -59,6 +59,7 @@ const ContentSection = () => {
               variant="outline"
               size="lg"
               className="bg-white text-background border-0 hover:bg-white/90 px-12 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300"
+              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Shop Now
             </Button>
@@ -175,6 +176,7 @@ const ContentSection = () => {
               <Button 
                 size="lg" 
                 className="bg-accent hover:bg-accent/80 text-white px-12 py-6 text-base uppercase tracking-wider font-semibold transition-all duration-300 w-full sm:w-auto"
+                onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Shop Now
               </Button>
@@ -182,6 +184,7 @@ const ContentSection = () => {
                 variant="outline" 
                 size="lg"
                 className="border border-border hover:border-foreground hover:bg-foreground hover:text-background px-12 py-6 text-base uppercase tracking-wider font-semibold transition-all duration-300 w-full sm:w-auto"
+                onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn More
               </Button>
