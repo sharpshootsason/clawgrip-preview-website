@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { useCart } from '@/contexts/CartContext';
 import { useToast } from '@/hooks/use-toast';
-import clawgripWraps from '@/assets/clawgrip-wraps.png';
+import clawgripWraps from '@/assets/clawgrip-pro-wraps-product.png';
 
 const ProductSection = () => {
   const { addItem } = useCart();
