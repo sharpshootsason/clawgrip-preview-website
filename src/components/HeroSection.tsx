@@ -28,14 +28,6 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 py-20">
-        <div className="mb-12">
-          <img 
-            src={clawGripLogo} 
-            alt="ClawGrip - Premium Grip Solutions" 
-            className="h-20 md:h-28 lg:h-36 mx-auto opacity-90"
-          />
-        </div>
-        
         <div className="max-w-4xl mx-auto space-y-6">
           <h1 className="text-sm sm:text-base md:text-lg uppercase tracking-[0.3em] text-foreground/70 font-light">
             Boxing | Grappling | MMA
