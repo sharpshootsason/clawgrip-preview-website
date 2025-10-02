@@ -53,20 +53,13 @@ const ContentSection = () => {
             For early rounds, late rounds, and zero distractions.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-end">
+          <div className="flex justify-end">
             <Button 
               variant="outline"
               size="lg"
-              className="bg-white text-background border-0 hover:bg-white/90 px-8 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300"
+              className="bg-white text-background border-0 hover:bg-white/90 px-12 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300"
             >
-              Shop Men
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg"
-              className="border border-foreground hover:bg-foreground hover:text-background px-8 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300"
-            >
-              Shop Women
+              Shop Now
             </Button>
           </div>
         </div>
