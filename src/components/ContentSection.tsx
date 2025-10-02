@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Check, Shield, Lock, Zap } from 'lucide-react';
-import heroBg1 from '@/assets/hero-bg-1.png';
+import newReleasesImage from '@/assets/new-releases-wraps.png';
 import ProductSection from './ProductSection';
 
 const ContentSection = () => {
@@ -41,7 +41,7 @@ const ContentSection = () => {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroBg1})` }}
+          style={{ backgroundImage: `url(${newReleasesImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-background/80" />
         
