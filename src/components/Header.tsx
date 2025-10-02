@@ -50,12 +50,6 @@ const Header = () => {
           {/* Right Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a 
-              href="#reviews" 
-              className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Reviews
-            </a>
-            <a 
               href="#contact" 
               className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
             >
@@ -89,13 +83,6 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Products
-            </a>
-            <a 
-              href="#reviews" 
-              className="block text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Reviews
             </a>
             <a 
               href="#contact" 
