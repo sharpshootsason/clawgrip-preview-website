@@ -21,7 +21,7 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Rotating Background Images */}
       <div 
-        className="absolute inset-0 bg-cover opacity-70 transition-opacity duration-1000"
+        className="absolute inset-0 bg-cover grayscale opacity-70 transition-opacity duration-1000"
         style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})`, backgroundPosition: 'center 35%' }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/60" />
