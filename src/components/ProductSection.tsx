@@ -1,25 +1,29 @@
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useCart } from '@/contexts/CartContext';
 import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react';
 import clawgripWraps from '@/assets/clawgrip-pro-wraps-product.png';
 import clawgripClassicWraps from '@/assets/clawgrip-classic-wraps-product.png';
 
 const ProductSection = () => {
   const { addItem } = useCart();
   const { toast } = useToast();
+  const [shadowSize, setShadowSize] = useState<string>('180"');
+  const [classicSize, setClassicSize] = useState<string>('180"');
 
-  const handleAddToCart = (productId: string, productName: string, productImage: string) => {
+  const handleAddToCart = (productId: string, productName: string, productImage: string, size: string) => {
     addItem({
-      id: productId,
-      name: productName,
+      id: `${productId}-${size}`,
+      name: `${productName} - ${size}`,
       price: 12.99,
       image: productImage,
     });
     
     toast({
       title: "Added to cart",
-      description: `${productName} has been added to your cart.`,
+      description: `${productName} - ${size} has been added to your cart.`,
     });
   };
   return (
@@ -56,10 +60,23 @@ const ProductSection = () => {
                 ClawGrip Shadow Black Wraps
               </h3>
               <p className="text-lg font-bold">$12.99</p>
+              
+              <div className="space-y-2">
+                <label className="text-sm font-medium uppercase tracking-wide">Size</label>
+                <Select value={shadowSize} onValueChange={setShadowSize}>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select size" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value='180"'>180"</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
               <Button 
                 className="w-full bg-accent hover:bg-accent/80 text-white uppercase tracking-wider font-semibold transition-all duration-300"
                 size="lg"
-                onClick={() => handleAddToCart('clawgrip-shadow-wraps', 'ClawGrip Shadow Black Wraps', clawgripWraps)}
+                onClick={() => handleAddToCart('clawgrip-shadow-wraps', 'ClawGrip Shadow Black Wraps', clawgripWraps, shadowSize)}
               >
                 Add to Cart
               </Button>
@@ -92,10 +109,23 @@ const ProductSection = () => {
                 ClawGrip Classic Black Wraps
               </h3>
               <p className="text-lg font-bold">$12.99</p>
+              
+              <div className="space-y-2">
+                <label className="text-sm font-medium uppercase tracking-wide">Size</label>
+                <Select value={classicSize} onValueChange={setClassicSize}>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select size" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value='180"'>180"</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
               <Button 
                 className="w-full bg-accent hover:bg-accent/80 text-white uppercase tracking-wider font-semibold transition-all duration-300"
                 size="lg"
-                onClick={() => handleAddToCart('clawgrip-classic-wraps', 'ClawGrip Classic Black Wraps', clawgripClassicWraps)}
+                onClick={() => handleAddToCart('clawgrip-classic-wraps', 'ClawGrip Classic Black Wraps', clawgripClassicWraps, classicSize)}
               >
                 Add to Cart
               </Button>
