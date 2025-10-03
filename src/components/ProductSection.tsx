@@ -11,14 +11,14 @@ const ProductSection = () => {
   const handleAddToCart = () => {
     addItem({
       id: 'clawgrip-pro-wraps',
-      name: 'ClawGrip Pro Wraps',
+      name: 'ClawGrip Shadow Black Wraps',
       price: 12.99,
       image: clawgripWraps,
     });
     
     toast({
       title: "Added to cart",
-      description: "ClawGrip Pro Wraps has been added to your cart.",
+      description: "ClawGrip Shadow Black Wraps has been added to your cart.",
     });
   };
   return (
@@ -35,7 +35,7 @@ const ProductSection = () => {
                 <div className="cursor-pointer mb-4 overflow-hidden bg-card/30 border border-border/30 transition-all duration-300 hover:border-accent/50">
                   <img
                     src={clawgripWraps}
-                    alt="ClawGrip Pro Wraps"
+                    alt="ClawGrip Shadow Black Wraps"
                     className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
@@ -43,7 +43,7 @@ const ProductSection = () => {
               <DialogContent className="max-w-4xl">
                 <img
                   src={clawgripWraps}
-                  alt="ClawGrip Pro Wraps"
+                  alt="ClawGrip Shadow Black Wraps"
                   className="w-full h-auto"
                 />
               </DialogContent>
@@ -51,7 +51,7 @@ const ProductSection = () => {
             
             <div className="space-y-3">
               <h3 className="text-base font-semibold uppercase tracking-wide">
-                ClawGrip Pro Wraps
+                ClawGrip Shadow Black Wraps
               </h3>
               <p className="text-lg font-bold">$12.99</p>
               <Button 
