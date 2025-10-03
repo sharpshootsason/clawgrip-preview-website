@@ -11,7 +11,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
-    }, 3000);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);
