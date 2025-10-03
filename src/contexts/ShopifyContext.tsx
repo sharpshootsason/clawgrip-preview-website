@@ -6,7 +6,10 @@ interface ShopifyContextType {
   isLoading: boolean;
 }
 
-const ShopifyContext = createContext<ShopifyContextType | undefined>(undefined);
+const ShopifyContext = createContext<ShopifyContextType>({
+  client: null,
+  isLoading: true,
+});
 
 export const ShopifyProvider = ({ children }: { children: ReactNode }) => {
   const [client, setClient] = useState<any>(null);
@@ -33,8 +36,5 @@ export const ShopifyProvider = ({ children }: { children: ReactNode }) => {
 
 export const useShopify = () => {
   const context = useContext(ShopifyContext);
-  if (!context) {
-    throw new Error('useShopify must be used within a ShopifyProvider');
-  }
   return context;
 };
