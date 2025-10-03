@@ -3,22 +3,23 @@ import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { useCart } from '@/contexts/CartContext';
 import { useToast } from '@/hooks/use-toast';
 import clawgripWraps from '@/assets/clawgrip-pro-wraps-product.png';
+import clawgripClassicWraps from '@/assets/clawgrip-classic-wraps-product.png';
 
 const ProductSection = () => {
   const { addItem } = useCart();
   const { toast } = useToast();
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (productId: string, productName: string, productImage: string) => {
     addItem({
-      id: 'clawgrip-pro-wraps',
-      name: 'ClawGrip Shadow Black Wraps',
+      id: productId,
+      name: productName,
       price: 12.99,
-      image: clawgripWraps,
+      image: productImage,
     });
     
     toast({
       title: "Added to cart",
-      description: "ClawGrip Shadow Black Wraps has been added to your cart.",
+      description: `${productName} has been added to your cart.`,
     });
   };
   return (
@@ -28,8 +29,9 @@ const ProductSection = () => {
           New Wraps
         </h2>
         
-        <div className="flex justify-center">
-          <div className="group max-w-md w-full">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Shadow Black Wraps */}
+          <div className="group max-w-md w-full mx-auto">
             <Dialog>
               <DialogTrigger asChild>
                 <div className="cursor-pointer mb-4 overflow-hidden bg-card/30 border border-border/30 transition-all duration-300 hover:border-accent/50">
@@ -57,7 +59,43 @@ const ProductSection = () => {
               <Button 
                 className="w-full bg-accent hover:bg-accent/80 text-white uppercase tracking-wider font-semibold transition-all duration-300"
                 size="lg"
-                onClick={handleAddToCart}
+                onClick={() => handleAddToCart('clawgrip-shadow-wraps', 'ClawGrip Shadow Black Wraps', clawgripWraps)}
+              >
+                Add to Cart
+              </Button>
+            </div>
+          </div>
+
+          {/* Classic Black Wraps */}
+          <div className="group max-w-md w-full mx-auto">
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="cursor-pointer mb-4 overflow-hidden bg-card/30 border border-border/30 transition-all duration-300 hover:border-accent/50">
+                  <img
+                    src={clawgripClassicWraps}
+                    alt="ClawGrip Classic Black Wraps"
+                    className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl">
+                <img
+                  src={clawgripClassicWraps}
+                  alt="ClawGrip Classic Black Wraps"
+                  className="w-full h-auto"
+                />
+              </DialogContent>
+            </Dialog>
+            
+            <div className="space-y-3">
+              <h3 className="text-base font-semibold uppercase tracking-wide">
+                ClawGrip Classic Black Wraps
+              </h3>
+              <p className="text-lg font-bold">$12.99</p>
+              <Button 
+                className="w-full bg-accent hover:bg-accent/80 text-white uppercase tracking-wider font-semibold transition-all duration-300"
+                size="lg"
+                onClick={() => handleAddToCart('clawgrip-classic-wraps', 'ClawGrip Classic Black Wraps', clawgripClassicWraps)}
               >
                 Add to Cart
               </Button>
