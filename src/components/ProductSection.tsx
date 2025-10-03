@@ -1,50 +1,8 @@
-import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useShopify } from '@/contexts/ShopifyContext';
-import { useToast } from '@/hooks/use-toast';
-import { useState } from 'react';
 import clawgripWraps from '@/assets/clawgrip-pro-wraps-product.png';
 import clawgripClassicWraps from '@/assets/clawgrip-classic-wraps-product.png';
 
 const ProductSection = () => {
-  const { client, isLoading } = useShopify();
-  const { toast } = useToast();
-  const [shadowSize, setShadowSize] = useState<string>('180"');
-  const [classicSize, setClassicSize] = useState<string>('180"');
-
-  const handleAddToCart = async (variantId: string, productName: string) => {
-    if (!client || isLoading) {
-      toast({
-        title: "Please wait",
-        description: "Shopify is loading...",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    try {
-      // Create checkout with the product
-      const checkout = await client.checkout.create();
-      const lineItemsToAdd = [{ variantId, quantity: 1 }];
-      const updatedCheckout = await client.checkout.addLineItems(checkout.id, lineItemsToAdd);
-      
-      // Redirect to Shopify checkout
-      window.location.href = updatedCheckout.webUrl;
-      
-      toast({
-        title: "Redirecting to checkout",
-        description: `${productName} added to cart.`,
-      });
-    } catch (error) {
-      console.error('Error adding to cart:', error);
-      toast({
-        title: "Error",
-        description: "Failed to add item to cart. Please try again.",
-        variant: "destructive",
-      });
-    }
-  };
   return (
     <section id="products" className="py-24 px-6 border-t border-border/30">
       <div className="container mx-auto max-w-7xl">
@@ -82,27 +40,7 @@ const ProductSection = () => {
                 <p className="text-xs text-muted-foreground mt-1">comes in pair</p>
               </div>
               <p className="text-lg font-bold">$12.99</p>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium uppercase tracking-wide">Size</label>
-                <Select value={shadowSize} onValueChange={setShadowSize}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select size" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value='180"'>180"</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <Button 
-                className="w-full bg-accent hover:bg-accent/80 text-white uppercase tracking-wider font-semibold transition-all duration-300"
-                size="lg"
-                onClick={() => handleAddToCart('gid://shopify/ProductVariant/YOUR_SHADOW_VARIANT_ID', 'ClawGrip Shadow Black Wraps')}
-                disabled={isLoading}
-              >
-                {isLoading ? 'Loading...' : 'Add to Cart'}
-              </Button>
+              <p className="text-sm text-muted-foreground">Size: 180"</p>
             </div>
           </div>
 
@@ -135,27 +73,7 @@ const ProductSection = () => {
                 <p className="text-xs text-muted-foreground mt-1">comes in pair</p>
               </div>
               <p className="text-lg font-bold">$12.99</p>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium uppercase tracking-wide">Size</label>
-                <Select value={classicSize} onValueChange={setClassicSize}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select size" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value='180"'>180"</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <Button 
-                className="w-full bg-accent hover:bg-accent/80 text-white uppercase tracking-wider font-semibold transition-all duration-300"
-                size="lg"
-                onClick={() => handleAddToCart('gid://shopify/ProductVariant/YOUR_CLASSIC_VARIANT_ID', 'ClawGrip Classic Black Wraps')}
-                disabled={isLoading}
-              >
-                {isLoading ? 'Loading...' : 'Add to Cart'}
-              </Button>
+              <p className="text-sm text-muted-foreground">Size: 180"</p>
             </div>
           </div>
         </div>
