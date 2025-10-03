@@ -1,30 +1,49 @@
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useCart } from '@/contexts/CartContext';
+import { useShopify } from '@/contexts/ShopifyContext';
 import { useToast } from '@/hooks/use-toast';
 import { useState } from 'react';
 import clawgripWraps from '@/assets/clawgrip-pro-wraps-product.png';
 import clawgripClassicWraps from '@/assets/clawgrip-classic-wraps-product.png';
 
 const ProductSection = () => {
-  const { addItem } = useCart();
+  const { client, isLoading } = useShopify();
   const { toast } = useToast();
   const [shadowSize, setShadowSize] = useState<string>('180"');
   const [classicSize, setClassicSize] = useState<string>('180"');
 
-  const handleAddToCart = (productId: string, productName: string, productImage: string, size: string) => {
-    addItem({
-      id: `${productId}-${size}`,
-      name: `${productName} - ${size}`,
-      price: 12.99,
-      image: productImage,
-    });
-    
-    toast({
-      title: "Added to cart",
-      description: `${productName} - ${size} has been added to your cart.`,
-    });
+  const handleAddToCart = async (variantId: string, productName: string) => {
+    if (!client || isLoading) {
+      toast({
+        title: "Please wait",
+        description: "Shopify is loading...",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      // Create checkout with the product
+      const checkout = await client.checkout.create();
+      const lineItemsToAdd = [{ variantId, quantity: 1 }];
+      const updatedCheckout = await client.checkout.addLineItems(checkout.id, lineItemsToAdd);
+      
+      // Redirect to Shopify checkout
+      window.location.href = updatedCheckout.webUrl;
+      
+      toast({
+        title: "Redirecting to checkout",
+        description: `${productName} added to cart.`,
+      });
+    } catch (error) {
+      console.error('Error adding to cart:', error);
+      toast({
+        title: "Error",
+        description: "Failed to add item to cart. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
   return (
     <section id="products" className="py-24 px-6 border-t border-border/30">
@@ -79,9 +98,10 @@ const ProductSection = () => {
               <Button 
                 className="w-full bg-accent hover:bg-accent/80 text-white uppercase tracking-wider font-semibold transition-all duration-300"
                 size="lg"
-                onClick={() => handleAddToCart('clawgrip-shadow-wraps', 'ClawGrip Shadow Black Wraps', clawgripWraps, shadowSize)}
+                onClick={() => handleAddToCart('gid://shopify/ProductVariant/YOUR_SHADOW_VARIANT_ID', 'ClawGrip Shadow Black Wraps')}
+                disabled={isLoading}
               >
-                Add to Cart
+                {isLoading ? 'Loading...' : 'Add to Cart'}
               </Button>
             </div>
           </div>
@@ -131,9 +151,10 @@ const ProductSection = () => {
               <Button 
                 className="w-full bg-accent hover:bg-accent/80 text-white uppercase tracking-wider font-semibold transition-all duration-300"
                 size="lg"
-                onClick={() => handleAddToCart('clawgrip-classic-wraps', 'ClawGrip Classic Black Wraps', clawgripClassicWraps, classicSize)}
+                onClick={() => handleAddToCart('gid://shopify/ProductVariant/YOUR_CLASSIC_VARIANT_ID', 'ClawGrip Classic Black Wraps')}
+                disabled={isLoading}
               >
-                Add to Cart
+                {isLoading ? 'Loading...' : 'Add to Cart'}
               </Button>
             </div>
           </div>
