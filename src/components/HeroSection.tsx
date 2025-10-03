@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import clawGripLogo from '@/assets/clawgrip-logo.png';
+import heroBg0 from '@/assets/hero-bg-0.png';
 import heroBg1 from '@/assets/hero-bg-1.png';
 import heroBg2 from '@/assets/hero-bg-2.png';
 import heroBg3 from '@/assets/hero-bg-3.png';
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const backgroundImages = [heroBg1, heroBg2, heroBg3];
+  const backgroundImages = [heroBg0, heroBg1, heroBg2, heroBg3];
 
   useEffect(() => {
     const interval = setInterval(() => {
