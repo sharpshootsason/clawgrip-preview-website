@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import clawGripLogo from '@/assets/clawgrip-logo.png';
 
@@ -49,12 +48,6 @@ const Header = () => {
 
           {/* Right Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a 
-              href="#contact" 
-              className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Contact
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,13 +76,6 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Products
-            </a>
-            <a 
-              href="#contact" 
-              className="block text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contact
             </a>
           </div>
         )}
