@@ -1,5 +1,4 @@
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
 import clawgripWraps from '@/assets/clawgrip-pro-wraps-product.png';
 import clawgripClassicWraps from '@/assets/clawgrip-classic-wraps-product.png';
 
@@ -42,11 +41,6 @@ const ProductSection = () => {
               </div>
               <p className="text-lg font-bold">$12.99</p>
               <p className="text-sm text-muted-foreground">Size: 180"</p>
-              <Button asChild className="w-full mt-4">
-                <a href="https://cjugav-sx.myshopify.com" target="_blank" rel="noopener noreferrer">
-                  Shop Now
-                </a>
-              </Button>
             </div>
           </div>
 
@@ -80,11 +74,6 @@ const ProductSection = () => {
               </div>
               <p className="text-lg font-bold">$12.99</p>
               <p className="text-sm text-muted-foreground">Size: 180"</p>
-              <Button asChild className="w-full mt-4">
-                <a href="https://cjugav-sx.myshopify.com" target="_blank" rel="noopener noreferrer">
-                  Shop Now
-                </a>
-              </Button>
             </div>
           </div>
         </div>
