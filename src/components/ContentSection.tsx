@@ -65,17 +65,6 @@ const ContentSection = () => {
               />
             </div>
           </div>
-
-          <div className="flex justify-center">
-            <Button 
-              variant="outline"
-              size="lg"
-              className="bg-white text-background border-0 hover:bg-white/90 px-12 py-6 text-sm uppercase tracking-widest font-bold transition-all duration-300"
-              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Shop Now
-            </Button>
-          </div>
         </div>
       </section>
 
